@@ -1,3 +1,5 @@
 # Solidity Temelleri
-  Solidity Temellerini Anlatan Konu Anlatım
+ 
+# Konu Anlatımları ;
+[Temel Kontrat Bilgileri-1 ;] ([Temel Kontrat Bilgileri-1](https://github.com/umaysafak/Solidity-Temeller/blob/main/Temel%20Kontrat%20Bilgileri-1))
   
