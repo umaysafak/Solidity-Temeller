@@ -1,0 +1,86 @@
+-------------------------------------------------------------------------------------------------
+
+--Solidity'de değişkenler 3 farklı gruba ayrılır :
+
+-------------------------------------------------------------------------------------------------
+
+    1) Sabit Boyutlu Değişkenler (Fixed Size Types) :
+
+        bool : true ve false değerlerini tutar. Varsayılan değerini false olarak tutar.
+
+        int : Sayıları tuttuğumuz değişkendir.Integer olarak adlandırılır.Aldığı değerler
+              -2^256 ile 2^256 aralığındadır.
+
+        uint : Sayıları tuttuğumuz değişkendir.Unsigned Integer olarak adlandırılır.Aldığı
+               değerler 0 ile 2^256 aralığındadır.
+
+        address : Ethereum cüzdan adreslerini tuttuğumuz, Solidity'e özel bir değişkendir.
+                  20 byte uzunluğundadır. Örn : 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4
+
+        bytes32 : String değerleri hexadecimal olan tutan değişkendir. Bytes'lar 1 ile 32
+                  arasında değerler alırlar.Eğer büyüklüğü belirtilmezse dinamik boyutlu,
+                  belirtilirse sabit boyutlu değişken olurlar.
+
+-------------------------------------------------------------------------------------------------
+
+    2) Dİnamik Boyutlu Değişkenler (Dynamic Size Types) :
+
+        string : Yazı karakterlerini tutmak için kullanılır.bytes değişkeni verileri
+                 hexademical olarak tutarken stringler string olarak tutar.
+
+        bytes : String değerleri hexademical olan tutan değişkendir.Eğer büyüklüğü
+                belirtilmezse dinamik boyutlu değişkendir.
+
+        array[] : Kısaca dizilerdir. Birden çok veriyi içlerinde barındırırlar.
+                  Örn : uint[] numbers = [1, 2, 3, 4] arraylerden index sıfırdan başlar.
+                  numbers[0] = 1
+
+        mapping (type => type) : Verileri key, value olarak tutmamızı sağlayan değişkendir.
+                                 Array'lerdeki bir değişkeni değiştirmek için kullanılabilir.
+
+-------------------------------------------------------------------------------------------------
+
+    3) Kullanıcı Tarafından Oluşturulan Değişkenler (User Defined Value Types) :
+
+        struct : birden fazla üyeye sahip yeni bir veri türü tanımlamayı sağlar.
+
+        enum : struct'lara benzer fakat elemanların index'leri sırayla devam ederek tutulur.
+
+-------------------------------------------------------------------------------------------------
+
+--Solidity'de değişkenler kapsam alanlarına göre 3 farklı gruba ayrılırlar :
+
+-------------------------------------------------------------------------------------------------
+
+    1) Yerel (Local) Değişkenler : Fonksiyonların içine yazılan yerel değişkenlerdir.Kontratın
+                                   her yerinde kullanılmazlar ve compile ederken fonksiyona 
+                                   hata verirler.
+
+-------------------------------------------------------------------------------------------------
+
+    2) Durum (State) Değişkenleri : Eğer değişken State'e yazılırsa kontratın her yerinde,
+                                    farklı fonksiyonlarda bu veriye erişebiliriz.
+
+-------------------------------------------------------------------------------------------------
+
+    3) Global Değişkenler : Bizim kontratımızla ilgisi olmayan global blockchain değişkenleridir.
+
+        block.number : Kaçıncı blokta olduğumuzu gösteren değişken;
+        block.difficulty : Şu anki bloğun zorluğunu gösteren değişken;
+        block.gaslimit : Bloğun gaz limitini gösteren değişken;
+        block.timestamp : Şu anki zamanı saniye cinsinden gösteren değişken;
+        msg.sender : Gönderimi yapan kişiyi gösteren değişken;
+        msg.value : Gönderilen tutarın miktarını gösteren değişken;
+        msg.data : Gönderilen mesajı gösteren değişken;
+
+-------------------------------------------------------------------------------------------------
+
+    Operatörler :
+
+        ! = mantıksal olumsuzlama
+        && = mantıksal bağlaç, "ve"
+        || = mantıksal ayrılma, "veya"
+        == = eşitlik
+        != = eşitsizlik
+                                   
+-------------------------------------------------------------------------------------------------
