@@ -1,0 +1,89 @@
+-------------------------------------------------------------------------------------------------
+
+// SPDX-License-Identifier: ___
+
+--Sözleşme dosyalarının en üstüne konulan SPDX lisans tanımlayıcısı geliştiricilerin
+kullandığı lisans türünü belirlemelerine yardımcı olur.
+
+--Belli başlı lisans türleri :
+
+1) MIT : Yazılımın ve ilgili belge dosyalarının bir kopyasını edinen herhangi bir kişiye,
+kullanım, kopyalama, değiştirme, birleştirme hakları dahil ancak bunlarla sınırlı olmamak üzere,
+herhangi bir kısıtlama olmaksızın yazılımı kullanma izni verilir.
+
+2) GPL : Kullanım amacı programın sınırsız olarak kullanma özgürlüğü, programın nasıl çalıştığını
+anlama ve özel amaçlara göre değiştirebilmesi özgürlüğü, programın kopyalarının sınırsız olarak
+dağıtılması özgürlüğü, programın değiştirilmiş halini dağıtma özgürlüklerini sağlamasıdır.
+
+3) EPL : Eclipse Kamu Lisansı, Eclipse uygulama geliştirme çatısının kaynak kodlarını 
+erişime açarken kullandığı bir özgü yazılım lisansıdır.
+
+4) Apache Licence : Apache Lisansı (2.0 sürümünden önce Apache Yazılım Lisansı olarak
+adlandırılmaktaydı.) Apache Lisansı (1.0, 1.1 ve 2.0 sürümleri) telif hakkı koruma ve feraget uyarısı
+gerektirmektedir ancak telif feragatlı bir lisans değildir. Lisans, özgür ve açık kaynak kodlu
+yazılımın geliştirilmesi için kaynak kodlarının kullanımına izin vermektedi.
+
+5) UNLICENSED : Geliştirme esnasında eğer bir lisans belirtmek istemiyorsak veya kaynak kodu açık
+kaynak değilse, bu lisanslama türü kullanılır.
+
+--And, Or, With ve + Operatörü Kullanımları :
+
+1) And Operatörü : Birde fazla lisansın birlikte kapsadığı kısıtlara sahip bir geliştirme yapılması
+durumunda kullanılır.
+
+2) Or Operatörü : Birden fazla lisans kısıtlamasına sahip fakat bu lisanslardan herhangi birisinin de
+yeterli olması durumunda kullanılır.
+
+3) With Operatörü : Bir lisan kısıtına sahip olup ayrıca lisanslamalar dışında da bir duruma sahipse
+bu operatör kullanılır. "Autoconf Exception 3.0" şeklinde bir tanımlamaya sahiptir.
+
+4) + Operatörü : Geliştirme esnasında kullandığımız lisans türünün non-GNU yani genel kullanıma
+sahip bir lisans olmadığı türlerde kullanılır. "AFL-2.0+" şeklinde bir kullanıma sahiptir.
+
+-------------------------------------------------------------------------------------------------
+
+pragma solidity version ___;
+
+--Yazılan kontratın hangi versiyon ile derleneceğini belirtir
+
+-------------------------------------------------------------------------------------------------
+
+contract ___ {}
+
+--Kontrata isim verir.
+
+-------------------------------------------------------------------------------------------------
+
+--Solidity'de her satırdan sonra noktalı virgül (;) konulmalıdır.
+
+-------------------------------------------------------------------------------------------------
+
+// -- Sadece bir satırı yorum satırı yapar.
+
+/* ___ */ -- Bu işaretler arasında kalan bütün satırları yorum satırı yapar.
+
+-------------------------------------------------------------------------------------------------
+
+CTRL + K + C : Belirlenen her yerleri hızlıca yorum satırına alır.
+
+CTRL + K + U : Belirlenen her yerleri hızlıca yorum satırından geri çıkarır.
+
+-------------------------------------------------------------------------------------------------
+
+--Ether Birimleri :
+
+    1 wei = 1
+    1 gwei = 10^9 wei = 1000000000
+    1 ether = 10^18 wei = 1000000000000000000
+
+-------------------------------------------------------------------------------------------------
+
+--Zaman Birimleri :
+
+    1 saniye = 1
+    1 dakika = 60
+    1 saat = 3600
+    1 gün = 86400
+    1 hafta = 604800
+
+-------------------------------------------------------------------------------------------------
