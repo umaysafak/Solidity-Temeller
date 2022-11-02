@@ -1,0 +1,61 @@
+// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.15;
+
+//if ve else ingilizce grammer mantığı ile aynıdır;
+//if = eğer verileni karşılıyorsa;
+//else = eğer verileni karşılaımyorsa;
+
+contract If {
+
+    bytes32 private loginPassword;
+    //bytes32 tipinde herkese kapalı loginPassword değişkeni oluşturuldu.
+
+    constructor(string memory _password) {
+        loginPassword = keccak256(abi.encode(_password));
+    }
+
+    //sözleşme deploy edilmeden önce sadece bir defa çağırılıp şifre belirlenecek herkese açık
+    //özel fonksiyon oluştulurdu ve loginPassword değeri _password değerine eşitlendi.
+
+    //keccak256 : kriptografik şifreleme yöntemidir.Bu yöntem herhangi bir miktarda girdi alır ve
+    //onu benzersiz bir 32 baytlık hash fonksiyonuna dönüştürür.
+
+    //abi.encode : Ethereum Sanal Makinası için sözleşme çağrılarını kodlamak ve işlemlerden veri okumak için kullanılır.
+    //Bir ABI'nin amacı, çağrılabilecek sözleşmedeki işlevleri tanımlamak ve her işlevin bağımsız
+    //değişkenleri nasıl kabul edeceğini ve sonucunu nasıl döndüreceğini açıklamaktır.
+
+    function login (string memory _password) public view returns (bool) {
+        if (loginPassword == keccak256(abi.encode(_password))) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    //Herkese açık bool tipi döndürücek içinde string tipinde _password bulunduran login fonksiyonu oluşturuldu.
+    //Eğer loginPassword değeri _password eşitliğini karşılıyorsa true olarak döndürücek.
+    //eğer loginPassword değeri _password eşitliğini karşılamıyorsa false olarak döndürücek.
+}
+
+//---------------------------------------------------------------------------------------------------
+
+//Eğer koşullar birden fazla ise aşağıdaki şekilde uzatılabilir ; 
+
+/* 
+
+    if {
+
+    } else if {
+
+    } else if {
+
+    } else if {
+        .
+        .
+        .
+    } else {
+         ;
+    }
+
+*/
