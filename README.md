@@ -8,4 +8,6 @@
 [Fonsiyonlar-3;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Fonsiyonlar-3)
 
 [Constructor-4;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Constructor-4)
+
+[If_Else-5;](https://github.com/umaysafak/Solidity-Temeller/blob/main/If_Else-5)
   
