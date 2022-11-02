@@ -5,26 +5,42 @@
 --Sözleşme dosyalarının en üstüne konulan SPDX lisans tanımlayıcısı geliştiricilerin
 kullandığı lisans türünü belirlemelerine yardımcı olur.
 
+    Örn : // SPDX-License-Identifier: MIT
+
+-------------------------------------------------------------------------------------------------
+
 --Belli başlı lisans türleri :
+
+-------------------------------------------------------------------------------------------------
 
 1) MIT : Yazılımın ve ilgili belge dosyalarının bir kopyasını edinen herhangi bir kişiye,
 kullanım, kopyalama, değiştirme, birleştirme hakları dahil ancak bunlarla sınırlı olmamak üzere,
 herhangi bir kısıtlama olmaksızın yazılımı kullanma izni verilir.
 
+-------------------------------------------------------------------------------------------------
+
 2) GPL : Kullanım amacı programın sınırsız olarak kullanma özgürlüğü, programın nasıl çalıştığını
 anlama ve özel amaçlara göre değiştirebilmesi özgürlüğü, programın kopyalarının sınırsız olarak
 dağıtılması özgürlüğü, programın değiştirilmiş halini dağıtma özgürlüklerini sağlamasıdır.
 
+-------------------------------------------------------------------------------------------------
+
 3) EPL : Eclipse Kamu Lisansı, Eclipse uygulama geliştirme çatısının kaynak kodlarını 
 erişime açarken kullandığı bir özgü yazılım lisansıdır.
+
+-------------------------------------------------------------------------------------------------
 
 4) Apache Licence : Apache Lisansı (2.0 sürümünden önce Apache Yazılım Lisansı olarak
 adlandırılmaktaydı.) Apache Lisansı (1.0, 1.1 ve 2.0 sürümleri) telif hakkı koruma ve feraget uyarısı
 gerektirmektedir ancak telif feragatlı bir lisans değildir. Lisans, özgür ve açık kaynak kodlu
 yazılımın geliştirilmesi için kaynak kodlarının kullanımına izin vermektedi.
 
+-------------------------------------------------------------------------------------------------
+
 5) UNLICENSED : Geliştirme esnasında eğer bir lisans belirtmek istemiyorsak veya kaynak kodu açık
 kaynak değilse, bu lisanslama türü kullanılır.
+
+-------------------------------------------------------------------------------------------------
 
 --And, Or, With ve + Operatörü Kullanımları :
 
@@ -46,11 +62,15 @@ pragma solidity version ___;
 
 --Yazılan kontratın hangi versiyon ile derleneceğini belirtir
 
+        Örn : pragma solidity ^0.8.15;
+
 -------------------------------------------------------------------------------------------------
 
 contract ___ {}
 
 --Kontrata isim verir.
+
+        Örn : contract örnekler;
 
 -------------------------------------------------------------------------------------------------
 
