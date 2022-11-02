@@ -1,0 +1,72 @@
+------------------------------------------------------------------------------------------------------
+
+    Fonksiyonlar ;
+
+------------------------------------------------------------------------------------------------------
+
+        --function anahtar gelimesi kullanarak tanımlanan,benzersiz ve ayrılmış anahtar kelimelerin
+          hiçbiriyle eşleşmeyen fonksiyonun adı gelir.Fonksiyon,parametrenin adını ve veri türünü
+          içeren bir parametre listesine sahip olabilir.
+
+------------------------------------------------------------------------------------------------------
+
+    Fonksiyon Niteleyicileri ;
+
+------------------------------------------------------------------------------------------------------
+
+        --view : Fonksiyonun blokchain'den veri okuyacağını fakat üzerinde değişiklik
+                 yapmayacağını bildirir.
+
+                    Örn : string public helloword = "Hello Word";
+
+                          function goster() public view returns (string memory) {
+                            return helloword;
+                          }
+
+------------------------------------------------------------------------------------------------------
+
+        --pure : Fonksiyonun blokchain'den hem okuma yapmayacağını hem de değişiklik
+                 yapmayacağını bildirir.
+
+                    örn : function goster(string memory metin) public pure returns (string memory) {
+                            return metin;
+                          }
+
+------------------------------------------------------------------------------------------------------
+
+    Fonksiyon Görünürlükleri;
+
+------------------------------------------------------------------------------------------------------
+
+        public : Bu fonksiyonu hem dışarıdan kullanıcılar çağırabilir hemde kontrat çağırabilir.
+
+                    Örn : function publicAnahtar() public pure returns(string memory) {
+                            return "Bu bir public fonskiyondur,Herkes ulaşabilir.";
+                          }
+
+------------------------------------------------------------------------------------------------------
+
+        private :  Bu fonksiyona sadece bu kontrat ulaşabilir. Dışarıdan kimse bu fonksiyona ulaşamaz.
+
+                    Örn : function privateAnahtar() private pure returns(string memory) {
+                            return "Bu bir private fonskiyondur,Dışardan kimse ulaşamaz.";
+                          }
+
+------------------------------------------------------------------------------------------------------
+
+        internal : sadece miras alan kontratlar bu fonksiyonu çağırabilir.
+                   Dışarıdan kullanıcı çağıramaz.
+  
+                    Örn : function internalAnahtar() internal pure returns(string memory) {
+                            return "Bu bir internal fonskiyondur,Sadece miras kontratlar ulaşabilir.";
+                          }
+
+------------------------------------------------------------------------------------------------------
+
+        external : Dışarıdan kullanıcalar çağırabilir fakat kontrat içerisnde çağırlmaz.
+
+                    Örn : function externalAnahtar() external pure returns(string memory) {
+                            return "Bu bir external fonskiyondur,Sadece dışardan ulaşılabilir.";
+                          }
+
+------------------------------------------------------------------------------------------------------
