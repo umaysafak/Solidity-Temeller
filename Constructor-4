@@ -1,0 +1,41 @@
+---------------------------------------------------------------------------------------------------
+
+    constructor ;
+
+        -- Kontrat deploy edilirken yalnızca bir kere çalışan, daha sonrada
+           bir daha çağırılamayan isteğe bağlı bir fonksiyondur.bir sözleşmenin
+           durum değişkenlerini başlatmak için kullanılır.
+
+                Örn : constructor(string memory isim, uint yas) {
+                          isim;
+                          yas;
+                      }
+           
+---------------------------------------------------------------------------------------------------
+
+    constant ;
+    
+        -- Değeri değiştirilemeyen değişkenlerdir. Atanan değer kontrat deploy
+           edildikten sonra bir daha değiştirilemez. Gaz maaliyetinden tasarruf sağlayabilir.
+           Global değişkenleri constant ile kullanamazsın.
+
+                Örn :  address public constant benimAdresim = 0x777788889999AaAAbBbbCcccddDdeeeEfFFfCcCc;
+                                                
+
+---------------------------------------------------------------------------------------------------
+
+    immutable ;
+        
+        -- Değeri değiştirilemeyen değişkenlerdir. Constant'tan farkı immutable ile
+           işaretlenmiş değişkenin değerinin constructor ile başlangıçta değiştirilebiliyor
+           oluşudur.
+
+                Örn : address public immutable benimAdresim;
+                      uint public immutable benimYasim;
+
+                      constructor(uint _yas) {
+                          benimAdresim = msg.sender;
+                          benimYasim = _yas;
+                    }
+
+---------------------------------------------------------------------------------------------------
