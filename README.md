@@ -6,4 +6,6 @@
 [Değişkenler ve Kapsamlar-2;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Değişkenler%20ve%20Kapsamlar%202)
 
 [Fonsiyonlar-3;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Fonsiyonlar-3)
+
+[Constructor-4;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Constructor-4)
   
