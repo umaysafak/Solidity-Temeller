@@ -10,4 +10,6 @@
 [Constructor-4;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Constructor-4)
 
 [If_Else-5;](https://github.com/umaysafak/Solidity-Temeller/blob/main/If_Else-5)
+
+[For_While-6;](https://github.com/umaysafak/Solidity-Temeller/blob/main/For_While-6)
   
