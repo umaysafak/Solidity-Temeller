@@ -1,0 +1,61 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.15;
+
+contract for_ {
+
+    uint[10] public sayi1;
+    //uint tipinde herkese açık 10 array uzunluğunda sayi1 oluşturuldu.
+
+    function listByFor() public {
+        uint[10] memory sayilar = sayi1;
+        for (uint i = 0; i < sayilar.length; i++) {
+            sayilar[i] = i;
+        }
+        sayi1 = sayilar;
+    }
+
+    //herkese açık listByFor fonksiyonu oluşturuldu,
+    //uint tipinde 10 array uzunluğunda sayilar sayi1'e eşitlendi,
+    //for döngüsü başlatılıp i değişkeni 0'a eşitlendi,i değeri sayilar'ın array'inin
+    //uzunluğundan(.length) küçük olacağı belirlendi ve her seferinde artacak şekilde oluşturuldu,
+    //array index'inin değeri kendisine eşitlendi,
+    //sayi1 değeri sayilar değerine eşitlendi.
+
+    function getFor() public view returns (uint[10] memory) {
+        return sayi1;
+    }
+
+    //getFor adında herkese açık sadece okuma yapıp uint[10] değerini döndürücek fonksiyon
+    //oluşturuldu ve sayi1 değeri döndürüldü.
+
+}
+
+contract while_ {
+
+    uint256[20] public sayi2;
+    // //uint tipinde herkese açık 20 array uzunluğunda sayi2 oluşturuldu.
+
+
+    function listByWhile() public {
+        uint i = 0;
+        while (i < sayi2.length) {
+            sayi2[i] = i;
+            i++;
+        }
+    }
+
+    //herkese açık listByWhile fonksiyonu oluşturuldu,
+    //uint tipinde i değeri sıfıra eşitlendi,
+    //while döngüsü başlatılıp i, sayi2 array'inin uzunluğundan(.length)
+    //küçük olacağı belirlendi,
+    //array index'inin değeri kendisine eşitlendi,
+    //her seferinde artacak şekilde oluşturuldu,
+
+    function getWhile() public view returns (uint256[20] memory) {
+        return sayi2;
+    }
+
+    //getWhile adında herkese açık sadece okuma yapıp uint[20] değerini döndürücek
+    //fonksiyon oluşturuldu ve sayi2 değeri döndürüldü.
+
+}
