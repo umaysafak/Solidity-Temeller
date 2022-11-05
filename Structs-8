@@ -1,0 +1,43 @@
+pragma solidity ^0.8.15;
+
+contract structs {
+
+    struct Ogrenci {
+        string isim;
+        string soyisim;
+        uint numara;
+        string not;
+    }
+    //içerisinde isim, soyisim, numara ve not değişkenleri bulunduran Ogrenci verisi oluşturuldu.
+
+    Ogrenci ogrenci1;
+    //struct ile üretilen Ogrenci verisi ile ogrenci1 adında nesne üretildi.
+
+    Ogrenci ogrenci2 = Ogrenci ("Bugrahan umay",
+                                 "Safak",
+                                 16154,
+                                 "B"
+                                 );
+    //oluşturulan ogrenci1 nesnesinin yanında farklı yöntem ile oluşturulan ogrenci2 nesnesi oluşturuldu.
+
+    function set_ogrenci1 () public {
+        ogrenci1 = Ogrenci("Cagri",
+                          "Kutluca",
+                           17094,
+                           "A+"
+                          );
+    }
+    //oluşturulan ogrenci1 nesnesinin bilgileri fonksiyon içerisinde belirlendi.
+
+    function get_ogrenci1 () public view returns (string memory, string memory, uint, string memory) {
+        return (ogrenci1.isim, ogrenci1.soyisim, ogrenci1.numara, ogrenci1.not);
+    }
+    //ogrenci1 nesnesinin belirlenen değerlerinin döndürülmesi için fonksiyon oluşturuldu.
+
+    function get_ogrenci2 () public view returns (string memory, string memory, uint, string memory) {
+        return (ogrenci2.isim, ogrenci2.soyisim, ogrenci2.numara, ogrenci2.not);
+    }
+    //ogrenc2 nesnesinin belirlenen değerlerinin döndürülmesi için fonksiyon oluşturuldu.
+
+
+}
