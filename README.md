@@ -19,4 +19,4 @@
 
 [Emuns-9;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Enums-9)
 
-[Modifiers-10;]()
+[Modifiers-10;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Modifiers-10)
