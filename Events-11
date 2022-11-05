@@ -1,0 +1,25 @@
+// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.15;
+
+contract Events {
+
+    event takas (
+        uint indexed zaman,
+        address indexed gonderici,
+        address indexed alici,
+        uint miktar
+    );
+    //Event : akıllı sözleşmelerin depolama aşamasını yeniden oluşturmak için değişkenleri endekslemesine,
+    //kullanıcı arayüzünün otomatik olarak güncellenmesine yardımcı olur ve belirli değişkenlerin test
+    //edilmesine izin verir. 
+
+    function _takas(address alici, uint miktar) external {
+        emit takas(block.timestamp, msg.sender, alici, miktar);
+    }
+
+    //kontrat deploy edildiğinde gönderilecek miktar ve alıcı adres seçilip gönderme işlemi yapılır.
+
+
+
+}
