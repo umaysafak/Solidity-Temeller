@@ -16,4 +16,5 @@
 [Mappings-7;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Mappings-7)
 
 [Structs-8;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Structs-8)
-  
+
+[Emuns-9;]()
