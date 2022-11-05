@@ -1,0 +1,30 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.13;
+
+contract Enums {
+
+    enum Siparis {
+        hazirlama,
+        paketleme,
+        kargolama
+    }
+    //içerisinde hazirlama, paketleme ve kargolama değişkenleri bulunduran Siparis verisi oluşturuldu.
+    //enum'lar index sırasına göre ilerlediği için;
+    // hazirlama  - 0
+    // paketleme  - 1
+    // kargolama - 2
+
+    Siparis public paket1;
+    //enum ile üretilen Siparis verisi ile paket1 adında nesne üretildi.
+
+    function set(Siparis _paket1) public {
+        paket1 = _paket1;
+    }
+    //paket1 nesnesinin durumunu hangi index sırasında olduğunu belirtmek için fonksiyon oluşturuldu.
+
+    function getSiparis() public view returns (Siparis) {
+        return paket1;
+    }
+    //paket1 nesnesinin belirlenen değerlerinin döndürülmesi için fonksiyon oluşturuldu.
+
+}
