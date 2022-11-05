@@ -17,4 +17,4 @@
 
 [Structs-8;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Structs-8)
 
-[Emuns-9;]()
+[Emuns-9;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Enums-9)
