@@ -14,4 +14,6 @@
 [For_While-6;](https://github.com/umaysafak/Solidity-Temeller/blob/main/For_While-6)
 
 [Mappings-7;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Mappings-7)
+
+[Structs-8;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Structs-8)
   
