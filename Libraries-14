@@ -1,0 +1,38 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.15;
+
+library insan {
+// insan adında library oluşturuldu.
+
+    struct kisi {
+        uint yas;
+    }
+    //kisi adında struct oluşturulup uint tipinde yas değeri atandı.
+
+    function dogumGunu(kisi storage _insan) public {
+        _insan.yas += 1;
+    }
+    //her seferinde bir artacağı belirlendi.
+
+    function yasiGoster(kisi storage _insan) public view returns(uint) {
+        return _insan.yas;
+    }
+    //yas değerinin gösterileceği fonksiyon oluşturuldu.
+}
+
+contract insandanKontrata {
+    mapping(uint => insan.kisi) insanlar;
+    //uint tipinden insan.kisi(struct ile oluşturulduğu için veri tipine dönüştü) tipine
+    //döndürülecek insanlar oluşturuldu.
+
+    function yeniYas() public {
+        insan.dogumGunu(insanlar[0]);
+    }
+    //insan library'sinde dogumGunu indexi sıfırlandı.
+
+    function goster() public view returns(uint) {
+        return insan.yasiGoster(insanlar[0]);
+    }
+    //insan.yasiGoster sıfırdan itibaren döndürülecek şekilde fonksiyon oluşturuldu.
+
+}
