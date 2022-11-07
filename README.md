@@ -26,3 +26,5 @@
 [ETH_Gönderimi-12;](https://github.com/umaysafak/Solidity-Temeller/blob/main/ETH_Gönderimi-12)
 
 [Errors-13;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Errors-13)
+
+[Libraries-14;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Libraries-14)
