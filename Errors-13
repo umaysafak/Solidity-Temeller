@@ -1,0 +1,56 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.15;
+
+contract Errors {
+
+    //errors = Güvenlik açıkları için hata mesajı oluşturmaya ve gas ücretlerinden 
+    //tasarruf etmemizi sağlar.
+    
+    uint public bakiye;
+    uint public constant Maximum_Miktar = 100;
+
+    function Gonderme(uint _miktar) public {
+        uint eskiBakiye = bakiye;
+        uint yeniBakiye = bakiye + _miktar;
+
+        require(yeniBakiye >= eskiBakiye, "Gerekenden fazla miktar");
+        require(yeniBakiye < Maximum_Miktar, "Maximum tutardan fazla gonderemezsiniz.");
+        
+
+        bakiye = yeniBakiye;
+
+        assert(bakiye >= eskiBakiye);
+    }
+
+    function Cekme(uint _miktar) public {
+        uint eskiBakiye = _miktar;
+
+        require(bakiye >= _miktar, "Yeterli bakiyeniz bulunmamakta");
+
+        if (bakiye < _miktar) {
+            revert("Gereken miktardan az");
+        }
+
+        bakiye -= _miktar;
+
+        assert(bakiye <= eskiBakiye);
+    }
+    
+    // error oluşturma ;
+
+/*  error eksikMiktar(address kullanici, uint kullaniciBakiyesi);
+
+    mapping(address => uint256) public kullaniciBakiyesi;
+
+    function paraCekme (uint _bakiye,uint yeniBakiye) external view {
+
+         _bakiye = yeniBakiye;
+
+        if(kullaniciBakiyesi[msg.sender] < yeniBakiye) {
+
+             revert eksikMiktar(msg.sender, yeniBakiye - kullaniciBakiyesi[msg.sender]);
+        }
+
+    } */
+
+}
