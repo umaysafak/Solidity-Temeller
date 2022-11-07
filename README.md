@@ -24,3 +24,5 @@
 [Events-11;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Events-11)
 
 [ETH_Gönderimi-12;](https://github.com/umaysafak/Solidity-Temeller/blob/main/ETH_Gönderimi-12)
+
+[Errors-13;]()
