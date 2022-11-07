@@ -1,0 +1,69 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.15;
+
+contract ETH_Gonderimi {
+    
+    mapping  (address => uint) bakiye;
+
+    function ETH_Gonder () payable external {
+        bakiye[msg.sender] = msg.value;
+    }
+
+    function BakiyeyiGoster () external view returns (uint) {
+        return bakiye[msg.sender];
+    }
+
+    //transfer() = yeterli miktar gönderilmezse hata verir.(revert gerçekleşir);
+
+    function ParaCekme (address payable alici, uint miktar) external {
+        require(bakiye[msg.sender] >= miktar, "yetersiz bakiye.");
+        alici.transfer(miktar);
+        bakiye[msg.sender] -= miktar;
+    }
+
+    /* send() = Gönderim gerçekleşirse true, gerçekleşmezse false gösterir;
+
+    function ParaCekme (address payable alici, uint miktar) external returns (bool) {
+        bool onaylama = alici.send(miktar);
+        bakiye[msg.sender] -= miktar;
+        return onaylama;
+    }
+
+    */
+
+    /* call() = İki değer gönderir; biri bool değerleri diğeri ise data(veri)'dir.
+
+    function ParaCekme (address payable alici, uint miktar) external returns (bool) {
+        (bool gonder, bytes memory veri) = alici.call{value:miktar}("yetersiz bakiye");
+        bakiye[msg.sender] -= miktar;
+        return gonder;
+    }
+
+    */
+
+    uint public GonderimSayisi;
+
+    receive () external payable {
+        GonderimSayisi += 1;
+    }
+
+    //Fonksiyonların dışında deploy ettiğimizde transcart ile direk kontrata ether
+    //gönderdiğimizde GonderimSayisi değeri bir artar ve fonksiyonların dışında ether
+    //yollarız.
+
+    uint public FallbackDegeri = 0;
+    
+    fallback () external payable {
+        FallbackDegeri +=1;
+    }
+
+    //Veri gönderdiğimiz durumlarda fallback kullanırız fakar değerler hexademical 
+    //deperleri olmalıdır (ASCII table)
+
+    //receive özel fonksiyonu kullnılmazsa fallback çalışır fakar receive fonksiyonu
+    //bulunuyorsa data iletmediğimiz sürece çalışmaz.
+
+
+
+
+}
