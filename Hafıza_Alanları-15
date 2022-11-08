@@ -1,0 +1,67 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.15;
+
+    // calldata = fonksiyon içerisinde doğrudan okuma yapmak istiyorsak kullanılır.
+    // memory = Değişiklik yapılmadan sadece okuma yapmak istiyorsak kullanılır.
+    // storage = değişiklik yapmak istiyorsak kullanılır.
+
+    // Değer tipleri (uint, int, bool, bytes32) kontrat üzerinde storage, 
+    // fonksiyon içinde memory'dir
+    
+    // mapping'ler her zaman kontrat üzerinde tanımlanır ve storage'dadır.
+
+contract HafizaAlanari {
+
+    struct Ogrenci {
+        uint yas;
+        uint puan;
+        string isim;
+    }
+
+    uint butunOgrenciler = 0;
+    mapping (uint => Ogrenci) ogrenciler ;
+
+    function ogrenciEkle (string calldata isim, uint yas, uint puan) external {
+        uint simdikiID = butunOgrenciler ++;
+        ogrenciler[simdikiID] = Ogrenci(yas, puan, isim);
+    } 
+
+    function ogrenciBilgisiStorage (
+
+        uint id,
+        string calldata yeniIsim,
+        uint yeniYas,
+        uint yeniPuan
+
+    ) external {
+
+        Ogrenci storage simdikiOgrenci = ogrenciler[id];
+
+        simdikiOgrenci.isim = yeniIsim;
+        simdikiOgrenci.yas = yeniYas;
+        simdikiOgrenci.puan = yeniPuan;
+
+    }
+    
+    // Bu fonksiyon işe yaramayacaktır, çünkü oluşturulan currentStudent ömrü
+    // fonksiyonun bitişine kadar olan bir değişken ve fonksiyon tamamlandığında
+    // silinecektir.değişiklik yapmaya çalıştığımızda storage olarak kayıtlı olduğu için
+    // yeni değeleri döndürmeyecektir.
+    
+    function ogrenciBilgisiMemory (
+
+        uint256 id,                 // memory
+        string calldata yeniIsim,    // calldata
+        uint8 yeniYas,               // memory
+        uint16 yeniPuan             // memory
+                 
+    ) external view {
+
+        Ogrenci memory simdikiOgrenci = ogrenciler[id];
+
+        simdikiOgrenci.isim = yeniIsim;
+        simdikiOgrenci.yas = yeniYas;
+        simdikiOgrenci.puan = yeniPuan;
+    }
+
+}
