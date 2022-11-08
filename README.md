@@ -32,3 +32,5 @@
 [Hafıza_Alanları-15;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Hafıza_Alanları-15)
 
 [Imports-16;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Imports-16)
+
+[Inheritances-17;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Inheritances-17)
