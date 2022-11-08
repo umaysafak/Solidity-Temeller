@@ -31,4 +31,4 @@
 
 [Hafıza_Alanları-15;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Hafıza_Alanları-15)
 
-[Deploys-16;]()
+[Imports-16;]()
