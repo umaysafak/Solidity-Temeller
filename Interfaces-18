@@ -1,0 +1,36 @@
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+//Interface'ler (Arayüzler) çalışma mantığı farklı olan ama yaptığı iş aynı olan
+//kontratların (örneğin token kontratları) ortak bir standarda sahip olmasını böylece
+//bu kontratlarla çalışmak isteyen birinin her bir kontrata özgü kod yazmak yerine bu
+//standarda uygun tek bir kod yazmasını sağlar.
+
+//ERC20, ERC721, ERC1155 gibi standartlar aslında bir interface şeklinde tanımlanmıştır.
+
+contract example {
+
+    uint public sayma;
+
+    function artis () external {
+        sayma += 1;
+    }
+}
+
+interface IExample {
+
+    function sayma() external view returns (uint);
+
+    function artis() external;
+}
+
+contract myExample {
+
+    function artisSayaci(address _sayac) external {
+        IExample(_sayac).artis();
+    }
+
+    function getSayma(address _sayac) external view returns (uint) {
+        return IExample(_sayac).sayma();
+    }
+}
