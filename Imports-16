@@ -1,0 +1,21 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.15;
+
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol";
+//OppenZeppelin kütüphanesinden bu sözleşmeye aktarılan Ownable.sol kontratı.
+
+contract Imports is Ownable  {
+    
+    receive ()payable external {}
+
+    fallback() payable external {}
+
+    function ETHGonder(address payable alici, uint miktar) onlyOwner public {
+        alici.transfer(miktar);
+    }
+    //onlyOwner nesnesi Ownable.sol kontratından gelmektedir.
+
+    function bakiyeGoster() public view returns(uint) {
+        return address(this).balance;
+    }
+}
