@@ -1,0 +1,40 @@
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+//Inheritance;
+
+//virtual: Bir alt kontrat tarafından fonksiyonun geçersiz kılınabileceğini bildiren niteleyicidir.
+
+//override: Bir üst kontratta bulunan virtual ile işaretlenmiş fonksiyonları
+//geçersiz kılmamızı ve tekrardan tanımladığımızı bildiren niteleyicidir.
+
+//Miras sırası önemlidir. C3-linearization kurallarına göre super anahtar sözcüğü ile
+//miras alınan kontrata erişebiliriz.
+
+contract A {
+
+    function Goster() public pure virtual returns (string memory) {
+        return "A";
+    }
+}
+
+contract B is A {
+
+    function Goster() public pure virtual override returns (string memory) {
+        return "B";
+    }
+}
+
+contract C is A {
+
+    function Goster() public pure virtual override returns (string memory) {
+        return "C";
+    }
+}
+
+contract D is B, C {
+    
+    function Goster() public pure override(B, C) returns (string memory) {
+        return super.Goster();
+    }
+}
