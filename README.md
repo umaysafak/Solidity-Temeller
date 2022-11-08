@@ -28,3 +28,5 @@
 [Errors-13;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Errors-13)
 
 [Libraries-14;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Libraries-14)
+
+[Hafıza_Alanları-15;]()
