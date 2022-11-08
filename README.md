@@ -29,4 +29,4 @@
 
 [Libraries-14;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Libraries-14)
 
-[Hafıza_Alanları-15;]()
+[Hafıza_Alanları-15;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Hafıza_Alanları-15)
