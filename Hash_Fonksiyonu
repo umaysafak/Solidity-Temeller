@@ -1,0 +1,22 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.13;
+
+contract Hash_fonksiyonu {
+
+    address public immutable adres;
+
+    constructor(address _adres) {
+        adres = msg.sender;
+    }
+
+    function Sifreleme(string memory metin, uint sayi, address adres) public pure returns (bytes32) {
+
+        return keccak256(abi.encodePacked(metin, sayi, adres));
+    }
+}
+
+// keccak256 : kriptografik şifreleme yöntemidir.Bu yöntem herhangi bir miktarda girdi alır ve
+// onu benzersiz bir 32 baytlık hash fonksiyonuna dönüştürür.
+
+// oluşturulan "adres" nesnesi msg.sender'a eşitlenerek oluşturulacak hash fonksiyonu sadece
+// msg.sender (sözleşme sahibinin adresi(deploy edilirken belirlenen adres)) ile oluşturulabilecek.
