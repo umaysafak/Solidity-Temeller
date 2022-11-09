@@ -11,6 +11,8 @@
 
 [If_Else-5;](https://github.com/umaysafak/Solidity-Temeller/blob/main/If_Else-5)
 
+[Hash_Fonksiyonu;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Hash_Fonksiyonu)
+
 [For_While-6;](https://github.com/umaysafak/Solidity-Temeller/blob/main/For_While-6)
 
 [Mappings-7;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Mappings-7)
