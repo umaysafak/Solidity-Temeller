@@ -36,3 +36,7 @@
 [Inheritances-17;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Inheritances-17)
 
 [Interfaces-18;](https://github.com/umaysafak/Solidity-Temeller/blob/main/Interfaces-18)
+
+[Call-19;]()
+
+
