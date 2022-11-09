@@ -4,8 +4,8 @@
 
 ------------------------------------------------------------------------------------------------------
 
-        --function anahtar gelimesi kullanarak tanımlanan,benzersiz ve ayrılmış anahtar kelimelerin
-          hiçbiriyle eşleşmeyen fonksiyonun adı gelir.Fonksiyon,parametrenin adını ve veri türünü
+        --function anahtar kelimesi kullanarak tanımlanan,benzersiz ve ayrılmış anahtar kelimelerin
+          hiçbiriyle eşleşmeyen fonksiyonun adı gelir.Fonksiyon, parametrenin adını ve veri türünü
           içeren bir parametre listesine sahip olabilir.
 
 ------------------------------------------------------------------------------------------------------
