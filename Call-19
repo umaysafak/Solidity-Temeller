@@ -1,6 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
+// call =  geliştiricilerin diğer sözleşmelerle etkileşim kurmak için kullandıkları düşük seviyeli bir işlevdir.
+// Bir Solidity akıllı sözleşmesi oluştururken, kendi sözleşmenizden başka bir sözleşmeyle etkileşim kurmak istediğinizde çağrı yöntemidir.
+
 contract Alinan {
 
     event alinan(address yonetici, uint bakiye, string mesaj);
