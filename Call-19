@@ -1,42 +1,42 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-contract Receiver {
+contract Alinan {
 
-    event Received(address caller, uint amount, string message);
+    event alinan(address yonetici, uint bakiye, string mesaj);
 
     receive () external payable {}
 
     fallback() external payable {
-        emit Received(msg.sender, msg.value, "Fallback was called");
+        emit alinan(msg.sender, msg.value, "Fallback cagirildi.");
     }
 
-    function foo(string memory _message, uint _x) public payable returns (uint) {
-        emit Received(msg.sender, msg.value, _message);
+    function gonder(string memory _mesaj, uint _x) public payable returns (uint) {
+        emit alinan(msg.sender, msg.value, _mesaj);
 
         return _x + 1;
     }
 }
 
-contract Caller {
+contract Yonetici {
 
-    event Response(bool success, bytes data);
+    event tepki(bool sonuc, bytes veri);
 
-    function testCallFoo(address payable _addr) public payable {
+    function testCallGonder(address payable _adres) public payable {
         
-        (bool success, bytes memory data) = _addr.call{value: msg.value, gas: 5000}(
-            abi.encodeWithSignature("foo(string,uint256)", "call foo", 123)
+        (bool sonuc, bytes memory veri) = _adres.call{value: msg.value, gas: 5000}(
+            abi.encodeWithSignature("testCallGonder(string,uint256)", "call testCallGonder", 123)
         );
 
-        emit Response(success, data);
+        emit tepki(sonuc, veri);
     }
 
-    function testCallDoesNotExist(address _addr) public {
-        (bool success, bytes memory data) = _addr.call(
+    function testCallDoesNotExist(address _adres) public {
+        (bool sonuc, bytes memory veri) = _adres.call(
             abi.encodeWithSignature("doesNotExist()")
         );
 
-        emit Response(success, data);
+        emit tepki(sonuc, veri);
     }
 
 }
